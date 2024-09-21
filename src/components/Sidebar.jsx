@@ -1,7 +1,8 @@
-// components/Sidebar.jsx
-import React from 'react';
-import spoda from './assets/spoda.jpg';
-import supportspod from './assets/supportspod.jpg';
+// Sidebar.jsx
+
+import spoda from  "./assets/spoda.jpg";
+import supportspod from "./assets/supportspod.jpg";
+import men from "./assets/men.jpg"
 
 const Sidebar = () => {
   return (
@@ -20,25 +21,43 @@ const Sidebar = () => {
           </ul>
         </nav>
       </div>
-      {/* User Info and Support */}
+
+ 
       <div>
         <div className="flex items-center mb-4">
-          <img src={supportspod} alt="submit" width={25} height={25} />
+          <img src={supportspod} alt="support" width={25} height={25} />
           <span className="text-lg font-medium ml-4">Support</span>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-semibold text-gray-700">80%</span>
-          </div>
-          <p className="text-sm text-gray-500 mb-2">Used credits</p>
-          <p className="text-sm text-gray-500">You have used 80% of your available credits. Need more?</p>
-          <button className="text-sm text-gray-500 hover:text-gray-700">Dismiss</button>
-          <button className="mt-2 ml-4 text-sm text-blue-500 hover:underline">Ask for more!</button>
+        <div className="relative bg-gray-100 p-4 rounded-lg mb-4">
+
+    <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+        &times; 
+    </button>
+    <div className="flex items-center justify-between mb-2">
+        <div className="relative flex items-center">
+            
+            <div className="w-12 h-12 rounded-full border-4 border-gray-300 flex items-center justify-center">
+            
+                <span className="absolute text-sm font-semibold text-gray-700">80%</span>
+            </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg">
-          <p className="text-sm font-semibold text-gray-700">olivia@untitledui.com</p>
-        </div>
-      </div>
+    </div>
+    <p className="text-sm text-gray-500 mb-2">Used credits</p>
+    <p className="text-sm text-gray-500">You have used 80% of your available credits. Need more?</p>
+    <button className="text-sm text-gray-500 hover:text-gray-700">Dismiss</button>
+    <button className="mt-2 ml-6 text-sm text-gray-500 hover:underline">Ask for more!</button>
+</div>
+
+<div className="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+    <div className="flex items-center">
+      
+        <img src={men} alt="support" className="w-10 h-10 rounded-full" />
+        <p className="text-xs font-semibold text-gray-700 ml-2">olivia@untitledui.com</p>
+    </div>
+
+</div>
+
+</div>
     </aside>
   );
 };
