@@ -35,6 +35,7 @@ const MainContent = () => {
      
              {/* <div className="bg-[#FF7640] p-6 rounded-lg  mb-4"> */}
              <div className="bg-[#FF7640] p-6 rounded-lg shadow  md:w-1/2 ">
+                <p className="text-4xl font-bold  mb-2">17%</p>
                <p className="text-lg text-gray-700">chances of India winning</p>
              </div>
 
